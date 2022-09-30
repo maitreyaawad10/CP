@@ -2,21 +2,21 @@
 
 using namespace std;
 
+#define ll long long
+
 void solve(){
-    int n;
-    cin >> n;
+    int a,b,x;
+    cin >> a >> b >> x;
 
-    set<int> st;
+    int d = abs(a-b);
 
-    for(int i = 1; i * i <= n; ++i){
-        st.insert(i * i);
+    if((d % (2*x)) == 0) {
+        cout << "YES" << endl;
     }
 
-    for(int i = 1; i * i * i <= n; ++i){
-        st.insert(i * i * i);
+    else {
+        cout << "NO" << endl;
     }
-
-    cout << st.size() << endl;
 }
 
 int main(){

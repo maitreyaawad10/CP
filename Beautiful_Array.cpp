@@ -11,7 +11,6 @@ void solve() {
 	if((s < (k*b)) || s > (k*b + (k-1)*n)){
 		cout << -1 << endl;
 	}
-
 	else{
 		ll a[n];
 

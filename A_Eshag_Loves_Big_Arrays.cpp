@@ -6,17 +6,18 @@ void solve(){
     int n;
     cin >> n;
 
-    set<int> st;
+    int a[n];
+    map<int, int> mp;
 
-    for(int i = 1; i * i <= n; ++i){
-        st.insert(i * i);
+    int cnt = 0;
+    for(int i = 0; i < n; ++i){
+        cin >> a[i];
+        mp[a[i]]++;
     }
 
-    for(int i = 1; i * i * i <= n; ++i){
-        st.insert(i * i * i);
-    }
+    sort(a, a+n);
 
-    cout << st.size() << endl;
+    cout << n - mp[a[0]] << endl;
 }
 
 int main(){

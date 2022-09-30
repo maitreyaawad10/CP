@@ -12,30 +12,23 @@ void solve(){
 		cin >> a[i];
 	}
 
-	int cnt = 0;
+	int count = 0;
 
 	for(int i = 0; i < n-1; ++i){
-		// int j = i+1;
-
 		if((i == 0 && a[i] != a[i+1]) || (i == n-1 && a[i] != a[i-1])){
-			cnt++;
+			count++;
 		}
 
 		else if(a[i] != a[i+1]){
-			cnt++;
+			count++;
 		}
 
 		else if(a[i] != a[i-1]){
-			cnt++;
+			count++;
 		}
-
-		// else{
-		// 	continue;
-		// }
-	
 	}
 
-	cout << cnt << endl;	
+	cout << count << endl;	
 }
 
 int main(){
