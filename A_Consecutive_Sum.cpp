@@ -32,11 +32,6 @@ void solve(){
 
     ll i = 1;
 
-    // for(ll i = 0; i < n; ++i){
-    //     cout << a[i] << " ";
-    // }
-    // cout << endl;
-
     while(i <= n){
         sum += a[i];
         cnt++;
