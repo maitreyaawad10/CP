@@ -2,15 +2,17 @@
 
 using namespace std;
 
+#define ll long long
+
 void solve(){
-    int a[3];
+    string s;
+    cin >> s;
 
-    for(int i = 0; i < 3; ++i)
-        cin >> a[i];
+    string t = s;
 
-    sort(a, a+3);
+    reverse(s.begin(), s.end());
 
-    cout << a[1] << endl;
+    cout << s + t << endl;
 }
 
 int main(){
