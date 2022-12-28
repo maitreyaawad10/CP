@@ -5,18 +5,29 @@ using namespace std;
 #define ll long long
 
 void solve(){
-    int n;
+    ll n;
     cin >> n;
 
-    vector<int> v(n);
+    vector<ll> v(1001, -1);
 
-    for(int i = 0; i < n; ++i){
-        cin >> v[i];
+    for(ll i = 1; i <= n; ++i){
+        ll x;
+        cin >> x;
+        v[x] = i;
     }
-    
-    for(int i = 0; i < n; ++i){
-        cin >> v[i];
+
+    ll ma = -1;
+
+    for(ll i = 1; i <= 1000; ++i){
+        for(ll j = i; j <= 1000; ++j){
+            if(v[i] > 0 && v[j] > 0){
+                if((__gcd(i, j)) == 1)
+                    ma = max(v[i] + v[j], ma);
+            }
+        }
     }
+
+    cout << ma << endl;
 }
 
 int main(){
